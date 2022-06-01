@@ -1,0 +1,29 @@
+<header class="mt-8 mx-16 bg-white rounded-sm shadow-sm px-6 flex items-center">
+  <img src="/assets/img/logo.png" alt="Sushi time" class="h-24 mr-8" />
+  <nav class="flex justify-between flex-grow">
+    <ul class="flex">
+      <li class="linkItem">
+        <a
+          [routerLink]="['/']"
+          [routerLinkActive]="'activeLink'"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Accueil</a
+        >
+      </li>
+      <li class="linkItem">
+        <a [routerLink]="['/menus']" [routerLinkActive]="'activeLink'">Menus</a>
+      </li>
+      <li class="linkItem">
+        <a [routerLink]="['/login']" [routerLinkActive]="'activeLink'">Login</a>
+      </li>
+    </ul>
+    <button
+      type="button"
+      class="btnUi secondary"
+      *ngIf="auth.isAuthenticated()"
+      (click)="auth.logout()"
+    >
+      Se déconnecter
+    </button>
+  </nav>
+</header>

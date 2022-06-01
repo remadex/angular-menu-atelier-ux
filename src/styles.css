@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btnUi {
+  @apply px-6 py-2 rounded-md text-white font-semibold duration-200 hover:translate-x-1;
+}
+
+.btnUi.primary {
+  @apply bg-teal-600 hover:bg-teal-800;
+}
+.btnUi.secondary {
+  @apply bg-rose-600 hover:bg-rose-800;
+}
+.btnUi.error {
+  @apply bg-red-600 hover:bg-red-800;
+}
+
+.mainTitle {
+  @apply text-4xl relative my-8 inline-block ml-4;
+}
+
+.mainTitle::after {
+  content: "";
+  @apply absolute -bottom-2 h-1 left-0 w-16 bg-orange-600 rounded duration-300;
+}
+
+.mainTitle:hover::after {
+  @apply w-full;
+}

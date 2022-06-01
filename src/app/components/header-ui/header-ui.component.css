@@ -1,0 +1,15 @@
+.linkItem {
+  @apply mr-8;
+}
+
+.linkItem a {
+  @apply block px-4 py-2 rounded-md duration-200 hover:bg-orange-500 hover:text-white;
+}
+
+.activeLink {
+  @apply bg-orange-500 text-white;
+}
+
+.activeLink:hover {
+  background-color: rgb(194 65 12) !important;
+}
