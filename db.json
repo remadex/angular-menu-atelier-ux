@@ -8,9 +8,15 @@
     },
     {
       "id": 3,
-      "name": "Kellogs aux anchois baignant dans une sauce chocolat/moutarde",
+      "name": "Kellogs aux anchois baignant dans une sauce chocolat/ketchup",
       "price": 12.12,
-      "type": "dessert"
+      "type": "main"
+    },
+    {
+      "name": "sfdsdf",
+      "price": 23,
+      "type": "starter",
+      "id": 4
     }
   ]
 }

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -8,9 +8,18 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class MenuComponent implements OnInit {
   constructor() {}
+  @Input('menu') menuModel!: Menu;
   @Output() handleSubmit = new EventEmitter();
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (this.menuModel) {
+      this.menu = new FormGroup({
+        name: new FormControl(this.menuModel.name, Validators.required),
+        price: new FormControl(this.menuModel.price, Validators.required),
+        type: new FormControl(this.menuModel.type, Validators.required),
+      });
+    }
+  }
 
   menu: FormGroup = new FormGroup({
     name: new FormControl('', Validators.required),

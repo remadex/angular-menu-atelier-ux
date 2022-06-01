@@ -1,1 +1,6 @@
-<p>edit works!</p>
+<h1 class="mainTitle">Édition du menu</h1>
+<form-menu
+  *ngIf="menu"
+  (handleSubmit)="editMenu($event)"
+  [menu]="menu"
+></form-menu>
